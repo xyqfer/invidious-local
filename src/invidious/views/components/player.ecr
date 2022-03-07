@@ -38,6 +38,8 @@
         <% captions.each do |caption| %>
             <track kind="captions" src="/api/v1/captions/<%= video.id %>?label=<%= caption.name %>" label="<%= caption.name %>">
         <% end %>
+
+        <track kind="captions" src="/api/v1/captions/<%= video.id %>?lang=en&tlang=zh-Hans&label=Chinese" label="Chinese (Simplified)">
     <% end %>
 </video>
 
